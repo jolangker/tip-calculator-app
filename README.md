@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Here](https://www.frontendmentor.io/solutions/tip-calculator-app-tailwind-css-and-vanilla-javascript-GY85-k9-m)
-- Live Site URL: [Here](https://jol-tip-calculator.app/)
+- Live Site URL: [Here](https://jol-tip-calculator-app.netlify.app/)
 
 ## My process
 
