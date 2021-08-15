@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="public/style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body
+    class="
+      bg-aviary-blue
+      font-space-mono
+      lg:flex lg:flex-col lg:items-center lg:h-screen lg:justify-center
+    "
+  >
+    <header class="pb-8">
+      <h1
+        class="text-center font-bold tracking-widest text-sherpa-blue text-2xl"
+      >
+        SPLI <br />TTER
+      </h1>
+    </header>
+
+    <main
+      class="
+        flex flex-col
+        p-6
+        bg-white
+        rounded-t-3xl
+        lg:flex-row
+        lg:justify-between
+        lg:space-x-10
+        lg:w-full
+        lg:max-w-4xl
+        lg:rounded-3xl
+        lg:space-y-0
+      "
+    >
+      <form id="inputForm" class="flex flex-col space-y-8 lg:flex-1">
+        <section id="billSection">
+          <label for="bill" class="label">Bill</label>
+          <div class="input-wrapper mt-2">
+            <img src="assets/images/icon-dollar.svg" alt="icon-dollar " />
+            <input type="number" id="bill" class="input" />
+          </div>
+        </section>
+        <section id="tipSection">
+          <label class="label">Select Tip %</label>
+          <div class="grid grid-cols-2 mt-2 gap-5 lg:grid-cols-3">
+            <div>
+              <input
+                type="radio"
+                name="tip"
+                id="5"
+                value="5"
+                class="absolute hidden"
+              />
+              <label for="5" class="radio-label">5%</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="tip"
+                id="10"
+                value="10"
+                class="absolute hidden"
+              />
+              <label for="10" class="radio-label">10%</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="tip"
+                id="15"
+                value="15"
+                class="absolute hidden"
+              />
+              <label for="15" class="radio-label">15%</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="tip"
+                id="25"
+                value="25"
+                class="absolute hidden"
+              />
+              <label for="25" class="radio-label">25%</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="tip"
+                id="50"
+                value="50"
+                class="absolute hidden"
+              />
+              <label for="50" class="radio-label">50%</label>
+            </div>
+
+            <input
+              id="custom"
+              type="number"
+              class="
+                input
+                text-center
+                focus:ring-2 focus:ring-tealish
+                rounded-lg
+                placeholder-sherpa-blue placeholder-opacity-80
+              "
+              placeholder="Custom"
+              min="0"
+            />
+          </div>
+        </section>
+        <section id="peopleSection">
+          <div class="flex justify-between">
+            <label for="people" class="label">Number of People</label>
+            <p class="error text-red-600 hidden">Can't be zero</p>
+          </div>
+          <div class="input-wrapper mt-2">
+            <img src="assets/images/icon-person.svg" alt="icon-person" />
+            <input type="number" id="people" class="input" />
+          </div>
+        </section>
+      </form>
+
+      <section id="resultSection" class="mt-10 lg:flex-1">
+        <div
+          class="
+            p-8
+            bg-sherpa-blue
+            rounded-2xl
+            flex flex-col
+            justify-between
+            lg:h-full
+          "
+        >
+          <div>
+            <div class="py-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <label class="label text-white">Tip Amount</label>
+                  <p class="font-bold text-salt-blue text-sm mt-1">/ person</p>
+                </div>
+                <div id="resultTip" class="result">$0</div>
+              </div>
+            </div>
+            <div class="py-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <label class="label text-white">Total</label>
+                  <p class="font-bold text-salt-blue text-sm mt-1">/ person</p>
+                </div>
+                <div id="resultTotal" class="result">$0</div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            id="reset"
+            class="
+              bg-tealish
+              text-sherpa-blue
+              font-bold
+              text-xl
+              w-full
+              rounded-lg
+              py-3
+              mt-6
+              opacity-20
+              cursor-not-allowed
+            "
+          >
+            RESET
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="build/script.js"></script>
+  </body>
+</html>
